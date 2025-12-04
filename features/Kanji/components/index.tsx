@@ -52,9 +52,10 @@ const KanjiCards = () => {
   >({});
 
   // Track cumulative set counts for proper level numbering
-  const [cumulativeCounts, setCumulativeCounts] = useState<
-    Record<KanjiLevel, number>
-  >({ n5: 0, n4: 0, n3: 0, n2: 0, n1: 0 });
+  const [cumulativeCounts, setCumulativeCounts] = useState<Record<
+    KanjiLevel,
+    number
+  > | null>(null);
 
   // Load cumulative counts once (lightweight - just needs lengths)
   useEffect(() => {
@@ -92,8 +93,8 @@ const KanjiCards = () => {
     let isMounted = true;
     const level = selectedKanjiCollectionName as KanjiLevel;
 
-    // Skip if already loaded
-    if (kanjiCollections[level]) return;
+    // Skip if cumulative counts not loaded yet or collection already loaded
+    if (!cumulativeCounts || kanjiCollections[level]) return;
 
     const loadSelectedCollection = async () => {
       const kanji = await kanjiDataService.getKanjiByLevel(level);

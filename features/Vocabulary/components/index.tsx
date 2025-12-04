@@ -60,9 +60,10 @@ const VocabCards = () => {
   >({});
 
   // Track cumulative set counts for proper level numbering
-  const [cumulativeCounts, setCumulativeCounts] = useState<
-    Record<VocabLevel, number>
-  >({ n5: 0, n4: 0, n3: 0, n2: 0, n1: 0 });
+  const [cumulativeCounts, setCumulativeCounts] = useState<Record<
+    VocabLevel,
+    number
+  > | null>(null);
 
   // Load cumulative counts once (lightweight - just needs lengths)
   useEffect(() => {
@@ -100,8 +101,8 @@ const VocabCards = () => {
     let isMounted = true;
     const level = selectedVocabCollectionName as VocabLevel;
 
-    // Skip if already loaded
-    if (vocabCollections[level]) return;
+    // Skip if cumulative counts not loaded yet or collection already loaded
+    if (!cumulativeCounts || vocabCollections[level]) return;
 
     const loadSelectedCollection = async () => {
       const words = await vocabDataService.getVocabByLevel(level);
