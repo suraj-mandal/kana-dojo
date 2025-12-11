@@ -286,7 +286,8 @@ export default function TimedChallenge<T>({ config }: TimedChallengeProps<T>) {
     );
   }
 
-  if (!isRunning && !isFinished) {
+  // Skip PreGameScreen when auto-starting (initialGameMode provided from GameModes modal)
+  if (!isRunning && !isFinished && !initialGameMode) {
     return (
       <PreGameScreen
         dojoType={dojoType}
@@ -309,6 +310,11 @@ export default function TimedChallenge<T>({ config }: TimedChallengeProps<T>) {
         onStart={handleStart}
       />
     );
+  }
+
+  // When auto-starting, show nothing briefly while waiting for handleStart to kick in
+  if (!isRunning && !isFinished && initialGameMode) {
+    return null;
   }
 
   if (isFinished) {
