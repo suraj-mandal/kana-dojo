@@ -89,7 +89,7 @@ const QuickSelectModal = ({
           </button>
         </div>
 
-        <div className="flex flex-col sm:flex-row sm:flex-nowrap gap-2 sm:gap-3 p-3 sm:p-4 border-b-2 border-[var(--border-color)] flex-shrink-0">
+        <div className="flex flex-wrap gap-2 sm:gap-3 p-3 sm:p-4 border-b-2 border-[var(--border-color)] flex-shrink-0">
           {[
             {
               label: 'Select All',
@@ -151,14 +151,12 @@ const QuickSelectModal = ({
                 borderBottomThickness={6}
                 className={clsx(
                   'w-auto text-sm disabled:cursor-not-allowed disabled:opacity-50',
-                  btn.iconOnly
-                    ? 'px-2.5 sm:px-3 py-2 min-w-[6.5rem]'
-                    : 'px-2.5 sm:px-3 py-2'
+                  btn.iconOnly ? 'px-4 sm:px-6 py-2' : 'px-3 sm:px-4 py-2'
                 )}
               >
                 <span
                   className={clsx(
-                    'flex items-center w-full justify-center',
+                    'flex items-center',
                     btn.iconOnly ? 'gap-0' : 'gap-2'
                   )}
                 >
@@ -185,7 +183,6 @@ const QuickSelectModal = ({
             placeholder="search for a level..."
             className={clsx(
               'px-3 sm:px-4 py-2 text-sm rounded-xl border-2 transition-all',
-              'flex-1 sm:flex-none sm:w-[220px]',
               'border-[var(--border-color)] hover:bg-[var(--card-color)]',
               'text-[var(--secondary-color)]',
               'focus:outline-0 focus:ring focus:ring-offset-2-[var(--secondary-color)]/80'
