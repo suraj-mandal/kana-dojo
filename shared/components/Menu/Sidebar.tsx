@@ -120,19 +120,6 @@ const Sidebar = () => {
         字<span className='max-lg:hidden'> Kanji</span>
       </Link>
       <Link
-        href='/translate'
-        className={clsx(
-          'text-2xl  duration-250 transition-all lg:py-2 lg:px-4 max-lg:px-3 max-lg:py-2 rounded-xl lg:w-full flex max-lg:justify-center items-center gap-2',
-          pathWithoutLocale === '/translate'
-            ? 'text-[var(--main-color)] bg-[var(--border-color)] lg:bg-[var(--card-color)]'
-            : 'hover:bg-[var(--card-color)] text-[var(--secondary-color)]'
-        )}
-        onClick={playClick}
-      >
-        <Languages className='shrink-0' />
-        <span className='max-lg:hidden'>Translate</span>
-      </Link>
-      <Link
         href='/progress'
         className={clsx(
           'text-2xl  duration-250 transition-all lg:py-2 lg:px-4 max-lg:px-3 max-lg:py-2 rounded-xl lg:w-full flex max-lg:justify-center items-center gap-2',
@@ -176,6 +163,23 @@ const Sidebar = () => {
           )}
         />
         <span className='max-lg:hidden'>Preferences</span>
+      </Link>
+
+      <div className='max-lg:hidden w-full mt-3 px-4 text-xs uppercase  text-[var(--main-color)] opacity-70'>
+        Tools
+      </div>
+      <Link
+        href='/translate'
+        className={clsx(
+          'max-lg:hidden text-xl duration-250 transition-all py-2 px-4 rounded-xl w-full flex items-center gap-2',
+          pathWithoutLocale === '/translate'
+            ? 'text-[var(--main-color)] bg-[var(--border-color)] lg:bg-[var(--card-color)]'
+            : 'hover:bg-[var(--card-color)] text-[var(--secondary-color)]'
+        )}
+        onClick={playClick}
+      >
+        <Languages className='shrink-0' />
+        <span>Translate</span>
       </Link>
 
       <div className='max-lg:hidden w-full mt-3 px-4 text-xs uppercase  text-[var(--main-color)] opacity-70'>
