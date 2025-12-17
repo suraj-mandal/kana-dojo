@@ -15,13 +15,13 @@ const viewOptions: { value: ViewType; label: string; icon: React.ReactNode }[] =
     {
       value: 'statistics',
       label: 'Stats',
-      icon: <TrendingUp className='w-4 h-4' />
+      icon: <TrendingUp className='w-5 h-5' />
     },
-    { value: 'streak', label: 'Streak', icon: <Flame className='w-4 h-4' /> },
+    { value: 'streak', label: 'Streak', icon: <Flame className='w-5 h-5' /> },
     {
       value: 'achievements',
       label: 'Achievements',
-      icon: <Trophy className='w-4 h-4' />
+      icon: <Trophy className='w-5 h-5' />
     }
   ];
 
@@ -33,7 +33,7 @@ const ProgressWithSidebar = () => {
     <SidebarLayout>
       {/* View Toggle Switch */}
       <div className='flex justify-center px-2'>
-        <div className='inline-flex flex-wrap justify-center rounded-2xl bg-[var(--card-color)] border border-[var(--border-color)] p-2 gap-2'>
+        <div className='inline-flex flex-wrap justify-center rounded-2xl bg-[var(--card-color)] border border-[var(--border-color)] p-2 gap-2 '>
           {viewOptions.map(option => (
             <button
               key={option.value}
@@ -42,7 +42,7 @@ const ProgressWithSidebar = () => {
                 playClick();
               }}
               className={clsx(
-                'relative px-3 sm:px-5 py-2.5 rounded-2xl text-sm font-medium transition-all hover:cursor-pointer flex items-center gap-1.5 sm:gap-2',
+                'relative  px-8 sm:px-5 py-3 rounded-2xl text-sm font-medium transition-all hover:cursor-pointer flex items-center gap-1.5 sm:gap-2',
                 currentView === option.value
                   ? 'bg-[var(--main-color)] text-[var(--background-color)] border-b-6 border-[var(--main-color-accent)]'
                   : 'text-[var(--secondary-color)] hover:text-[var(--main-color)] border-b-4 border-[var(--card-color)] hover:border-[var(--border-color)]/50 hover:bg-[var(--border-color)]/50'
