@@ -40,7 +40,7 @@ const isKatakana = (char: string): boolean => {
 
 // Tile styles shared between active and blank tiles
 const tileBaseStyles =
-  'relative flex items-center justify-center rounded-xl px-5 py-2.5 text-3xl font-medium sm:px-6 sm:py-3 sm:text-4xl border-b-8';
+  'relative flex items-center justify-center rounded-3xl px-6 sm:px-8 py-3 text-2xl font-medium sm:text-3xl border-b-8';
 
 interface TileProps {
   id: string;
@@ -60,7 +60,9 @@ const ActiveTile = memo(({ id, char, onClick, isDisabled }: TileProps) => {
       disabled={isDisabled}
       className={clsx(
         tileBaseStyles,
-        'cursor-pointer transition-colors active:translate-y-[4px] active:border-b-0',
+        'cursor-pointer transition-colors',
+        // Match ActionButton's smooth press animation: translate down + add margin to prevent layout shift
+        'active:mb-[8px] active:translate-y-[8px] active:border-b-0',
         'border-[var(--secondary-color-accent)] bg-[var(--secondary-color)] text-[var(--background-color)]',
         isDisabled && 'cursor-not-allowed opacity-50'
       )}
@@ -381,7 +383,7 @@ const WordBuildingGame = ({
       {/* Word Display */}
       <div className='flex flex-row items-center gap-1'>
         <motion.p
-          className='text-8xl font-normal sm:text-9xl'
+          className='text-7xl  sm:text-8xl'
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           key={wordData.wordChars.join('')}
@@ -392,7 +394,7 @@ const WordBuildingGame = ({
 
       {/* Answer Row Area */}
       <div className='flex w-full flex-col items-center'>
-        <div className='flex min-h-[4.5rem] w-full items-center border-b border-[var(--border-color)] px-2 sm:w-1/2'>
+        <div className='flex min-h-[5rem] w-full items-center border-b border-[var(--border-color)] px-2 pb-2 sm:w-1/2'>
           <div className='flex flex-row flex-wrap justify-start gap-3'>
             {/* Render placed tiles in the answer row */}
             {placedTiles.map(char => (
@@ -488,14 +490,14 @@ const WordBuildingGame = ({
 
         <ActionButton
           ref={buttonRef}
-          borderBottomThickness={8}
+          borderBottomThickness={12}
           borderRadius='3xl'
-          className='w-full py-4 text-xl md:w-1/2'
+          className='w-full py-4 text-2xl font-medium md:w-1/2'
           onClick={showContinue ? handleContinue : handleCheck}
           disabled={!canCheck && !showContinue}
         >
           <span>{showContinue ? 'continue' : 'check'}</span>
-          <CircleArrowRight />
+          {/* <CircleArrowRight /> */}
         </ActionButton>
       </div>
 
