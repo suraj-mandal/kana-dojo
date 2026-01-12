@@ -133,7 +133,9 @@ function EmptyState() {
       animate={{ opacity: 1 }}
       className='flex flex-col items-center justify-center py-16 text-center'
     >
-      <div className='mb-4 text-6xl opacity-30'>🏆</div>
+      <div className='mb-4 opacity-30'>
+        <Trophy className='h-16 w-16' />
+      </div>
       <p className='text-[var(--secondary-color)]'>No gauntlet data yet</p>
       <p className='text-sm text-[var(--secondary-color)]/60'>
         Complete a gauntlet to see your stats!

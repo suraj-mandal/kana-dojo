@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { cn } from '@/shared/lib/utils';
 import type { MasteryDistribution } from '../../types/stats';
+import { ChartColumn } from 'lucide-react';
 
 /**
  * Props for the MasteryDistributionChart component
@@ -125,7 +126,9 @@ export default function MasteryDistributionChart({
 
         {!hasData ? (
           <div className='flex flex-col items-center justify-center py-16 text-center'>
-            <div className='mb-4 text-6xl opacity-30'>📊</div>
+            <div className='mb-4 opacity-30'>
+              <ChartColumn className='h-16 w-16' />
+            </div>
             <p className='text-[var(--secondary-color)]'>
               No characters practiced yet
             </p>
@@ -141,7 +144,7 @@ export default function MasteryDistributionChart({
                       percent > 0 && (
                         <motion.div
                           key={key}
-                          className='relative flex h-full items-center justify-center overflow-hidden'
+                          className='relative flex h-full items-center justify-center overflow-hidden bg-gradient-to-r from-[var(--secondary-color)] to-[var(--main-color)]'
                           initial={{ width: 0 }}
                           animate={{ width: `${percent}%` }}
                           transition={{

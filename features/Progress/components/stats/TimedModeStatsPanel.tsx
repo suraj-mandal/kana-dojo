@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/shared/lib/utils';
-import { Clock, Target, Zap, Trophy } from 'lucide-react';
+import { Clock, Target, Zap, Trophy, Timer } from 'lucide-react';
 import { ActionButton } from '@/shared/components/ui/ActionButton';
 import type { TimedModeStats, ContentType } from '../../types/stats';
 
@@ -100,7 +100,9 @@ function ContentTypeStats({ stats }: { stats: TimedModeStats }) {
         animate={{ opacity: 1 }}
         className='flex flex-col items-center justify-center py-16 text-center'
       >
-        <div className='mb-4 text-6xl opacity-30'>⏱️</div>
+        <div className='mb-4 opacity-30'>
+          <Timer className='h-16 w-16' />
+        </div>
         <p className='text-[var(--secondary-color)]'>No Blitz data yet</p>
         <p className='text-sm text-[var(--secondary-color)]/60'>
           Start a Blitz challenge to see stats!
