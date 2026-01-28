@@ -1,10 +1,10 @@
 [
   {
-  "japanese": "世界は残酷だ…それでも美しい",
-  "romaji": "Sekai wa zankoku da... soredemo utsukushii",
-  "english": "This world is cruel... yet so beautiful.",
-  "anime": "Attack on Titan",
-  "character": "Mikasa Ackerman"
+    "japanese": "世界は残酷だ…それでも美しい",
+    "romaji": "Sekai wa zankoku da... soredemo utsukushii",
+    "english": "This world is cruel... yet so beautiful.",
+    "anime": "Attack on Titan",
+    "character": "Mikasa Ackerman"
   },
   {
     "japanese": "やれやれだぜ…まったく。",
@@ -112,17 +112,24 @@
     "character": "Kenshiro"
   },
   {
-  "japanese": "俺はガンダムだ！",
-  "romaji": "Ore wa Gandamu da!",
-  "english": "I am Gundam!",
-  "anime": "Mobile Suit Gundam 00",
-  "character": "Setsuna F. Seiei"
-},
+    "japanese": "俺はガンダムだ！",
+    "romaji": "Ore wa Gandamu da!",
+    "english": "I am Gundam!",
+    "anime": "Mobile Suit Gundam 00",
+    "character": "Setsuna F. Seiei"
+  },
   {
-  "japanese": "世界は残酷だ…それでも美しい",
-  "romaji": "Sekai wa zankoku da... soredemo utsukushii",
-  "english": "This world is cruel... yet so beautiful.",
-  "anime": "Attack on Titan",
-  "character": "Mikasa Ackerman"
-}
+    "japanese": "世界は残酷だ…それでも美しい",
+    "romaji": "Sekai wa zankoku da... soredemo utsukushii",
+    "english": "This world is cruel... yet so beautiful.",
+    "anime": "Attack on Titan",
+    "character": "Mikasa Ackerman"
+  },
+  {
+    "japanese": "今日の俺は一味違うぜ！",
+    "romaji": "Kyou no ore wa hitomi chigau ze!",
+    "english": "I'm on a different level today!",
+    "anime": "JoJo's Bizarre Adventure: Diamond is Unbreakable",
+    "character": "Okuyasu Nijimura"
+  }
 ]
