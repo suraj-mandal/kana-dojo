@@ -411,14 +411,17 @@
   },
   {
     "id": 83,
-    "text": "\"〜にしたがって\" means \"as / in accordance with...\"."
+    "text": "\"〜にしたがって\" means \"as / in accordance with...\".",
+    "completed": true
   },
   {
     "id": 84,
-    "text": "\"〜を通して\" means \"through / throughout...\"."
+    "text": "\"〜を通して\" means \"through / throughout...\".",
+    "completed": true
   },
   {
     "id": 85,
-    "text": "\"〜に限って\" means \"only / exclusively\"."
+    "text": "\"〜に限って\" means \"only / exclusively\".",
+    "issued": true
   }
 ]
