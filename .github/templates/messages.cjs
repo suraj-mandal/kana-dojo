@@ -17,10 +17,10 @@ module.exports = {
       'easy',
       'up-for-grabs',
       'first-timers-only',
-      'documentation',
       'beginner-friendly',
       'enhancement',
-      // 'simple task',
+      'beginner',
+      'low hanging fruit',
     ],
     // Label for filtering community issues
     community: 'community',
@@ -210,7 +210,7 @@ module.exports = {
     common: {
       difficulty: 'Easy (good first issue!)',
       instructionsHeader: '### 📝 Instructions',
-      footer: "**Questions?** Comment below and we'll help! 🙌",
+      footer: "### 🚀 Quick Info\n\n| | |\n|---|---|\n| **Difficulty** | Beginner / Easy |\n| **Time** | < 1 minute |\n| **Language** | TypeScript, JSON |\n| **Framework** | Next.js, React |\n| **Good for** | First-time contributors, Hacktoberfest |\n\n> **No coding experience required!** This is a simple JSON/data file edit — perfect for your first open source contribution.\n\n**Questions?** Comment below and we'll help! 🙌\n\n_This is a beginner-friendly, good first issue for first-time open source contributors. No coding experience needed — just edit a JSON file! See our [Contributing Guide](../blob/main/.github/CONTRIBUTING.md) for step-by-step instructions._",
       // Common instruction steps (used by buildInstructions)
       steps: {
         addComma: 'Make sure to add a comma after the previous last item',
@@ -244,7 +244,7 @@ module.exports = {
 
     theme: {
       title:
-        '[Good First Issue] {emoji} Add New Color Theme: {name} (good-first-issue)',
+        '[Good First Issue] {emoji} Add New Color Theme: {name}',
       header: '## 🎨 Add New Color Theme: "{name}"',
       category: 'Community Contribution - Theme',
       estimatedTime: '<1 min',
@@ -261,7 +261,7 @@ module.exports = {
     },
     fact: {
       title:
-        '[Good First Issue] {emoji} Add Interesting, Cultural Fact about Japan {id} (good-first-issue)',
+        '[Good First Issue] {emoji} Add Interesting, Cultural Fact about Japan {id}',
       header: '## 🎋 Add New Japan Fact',
       category: 'Community Contribution - Fun Fact',
       estimatedTime: '<1 min',
@@ -275,7 +275,7 @@ module.exports = {
     },
     proverb: {
       title:
-        '[Good First Issue] {emoji} Add New Japanese Proverb {id} (good-first-issue)',
+        '[Good First Issue] {emoji} Add New Japanese Proverb {id}',
       header: '## 🎌 Add Japanese Proverb (ことわざ)',
       category: 'Community Contribution - Proverb',
       estimatedTime: '<1 min',
@@ -288,7 +288,7 @@ module.exports = {
     },
     trivia: {
       title:
-        '[Good First Issue] {emoji} Add New Trivia Question {id} (good-first-issue)',
+        '[Good First Issue] {emoji} Add New Trivia Question {id}',
       header: '## 🧠 Add New Trivia Question',
       category: 'Community Contribution - Trivia',
       estimatedTime: '<1 min',
@@ -301,7 +301,7 @@ module.exports = {
     },
     grammar: {
       title:
-        '[Good First Issue] {emoji} Add New Grammar Point {id} (good-first-issue)',
+        '[Good First Issue] {emoji} Add New Grammar Point {id}',
       header: '## 📖 Add New Grammar Point',
       category: 'Community Contribution - Grammar',
       estimatedTime: '<1 min',
@@ -314,7 +314,7 @@ module.exports = {
     },
     animeQuote: {
       title:
-        '[Good First Issue] {emoji} Add Famous Anime Quote {id} (good-first-issue)',
+        '[Good First Issue] {emoji} Add Famous Anime Quote {id}',
       header: '## 🎬 Add Famous Anime Quote',
       category: 'Community Contribution - Anime Quote',
       estimatedTime: '<1 min',
