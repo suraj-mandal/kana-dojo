@@ -159,7 +159,9 @@
     "mainColor": "oklch(55.0% 0.165 250.0 / 1)",
     "secondaryColor": "oklch(85.0% 0.065 90.0 / 1)",
     "issued": true,
-    "completed": false
+    "completed": true,
+    "completedBy": "Prasad3Suryavanshi",
+    "completedPR": 4682
   },
   {
     "id": "shinkansen-speed",
