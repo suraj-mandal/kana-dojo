@@ -1252,5 +1252,16 @@
       "forks": 15,
       "contributors": 1
     }
+  },
+  {
+    "collectedAt": "2026-06-01T20:29:43.354Z",
+    "stars": 2523,
+    "forks": 2145,
+    "contributors": 471,
+    "diff": {
+      "stars": 11,
+      "forks": 17,
+      "contributors": 0
+    }
   }
 ]
